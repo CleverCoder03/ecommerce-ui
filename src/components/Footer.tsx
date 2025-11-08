@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="mt-16 flex flex-col items-center gap-8 md:justify-between md:gap-0 md:flex-row md:items-start bg-gray-800 rounded-lg p-8 [&>section]:flex [&>section]:flex-col [&>section]:items-center md:[&>section]:items-start [&>section]:gap-4">
+    <div className="mt-12 flex flex-col items-center gap-8 md:justify-between md:gap-0 md:flex-row md:items-start bg-gray-800 rounded-lg p-8 [&>section]:flex [&>section]:flex-col [&>section]:items-center md:[&>section]:items-start [&>section]:gap-4">
       <section className="[&>p]:text-sm [&>p]:text-gray-400">
         <Link href={"/"}>
           <p className="text-base font-medium uppercase tracking-wider text-white">

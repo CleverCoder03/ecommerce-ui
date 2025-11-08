@@ -2,6 +2,7 @@ import { ProductsType } from "@/type";
 import Categories from "./Categories";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
+import Filter from "./Filter";
 
 //Temporary data
 const products: ProductsType = [
@@ -116,10 +117,11 @@ const products: ProductsType = [
 ];
 
 
-const ProductList = ({category}:{category: string}) => {
+const ProductList = ({category, params}:{category: string, params: "Homepage" | "Productpage"}) => {
   return (
-    <div className="w-full">
+    <div className="w-full py-4">
         <Categories />
+        {params === "Productpage" && <Filter />}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
             {products.map((product) => (
                 <ProductCard key={product.id} product={product} />

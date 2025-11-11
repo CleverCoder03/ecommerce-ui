@@ -120,7 +120,7 @@ const CartPage = () => {
       <div className="flex w-full flex-col lg:flex-row gap-16">
         {/* STEPS */}
         <div className="w-full lg:w-7/12 shadow-lg border border-gray-100 p-8 rounded-lg flex flex-col gap-8">
-        <h1 className="font-semibold text-lg">Cart Items</h1>
+        {/* <h1 className="font-semibold text-lg">Cart Items</h1> */}
           {activeStep === 1 ? (
             cartItems.map((item) => (
               // SINGLE CART ITEM
@@ -154,7 +154,7 @@ const CartPage = () => {
               </div>
             ))
           ) : activeStep === 2 ? (
-            <ShippingForm />
+            <ShippingForm setShippingForm={setShippingForm} />
           ) : activeStep == 3 && shippingForm ? (
             <PaymentForm />
           ) : (
